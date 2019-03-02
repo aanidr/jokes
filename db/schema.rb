@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_02_165956) do
+ActiveRecord::Schema.define(version: 2019_03_02_185229) do
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 2019_03_02_165956) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["priority", "run_at"], name: "delayed_jobs_priority"
+  end
+
+  create_table "jokes", force: :cascade do |t|
+    t.string "title"
+    t.text "text"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_jokes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
