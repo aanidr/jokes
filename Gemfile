@@ -39,6 +39,9 @@ gem 'devise'
 gem 'cancancan'
 gem 'rolify'
 
+gem 'jquery-rails'
+gem 'bootstrap-sass'
+
 gem 'delayed_job_active_record'
 gem 'daemons'
 
