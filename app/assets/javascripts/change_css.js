@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
   $('#js-joke-css-red-btn').click( function(event){
     $('#js-joke-css-div').css({
       'color':'red',
